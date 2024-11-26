@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Home.css'
-import HomeBanner from '../images/home-banner-2.png'
+import HomeBanner from '../images/home-banner1.png'
 import Products from '../components/Products'
 import Footer from '../components/Footer'
 import FlashSale from '../components/FlashSale'
@@ -11,11 +11,9 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  const [bannerImg, setBannerImg] = useState();
+  const [bannerImg, setBannerImg] = useState(HomeBanner);
 
-  useEffect(()=>{
-    fetchBanner();
-  }, [])
+
 
   const fetchBanner = async() =>{
     await axios.get('http://localhost:6001/fetch-banner').then(
