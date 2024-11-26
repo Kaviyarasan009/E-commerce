@@ -21,7 +21,8 @@ mongoose.connect('mongodb+srv://skaviyarasan026:kavi2002@cluster0.ipa78.mongodb.
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(()=>{
-
+    console.log('MongoDB connected');
+    
     app.post('/register', async (req, res) => {
         const { username, email, usertype, password } = req.body;
         try {
